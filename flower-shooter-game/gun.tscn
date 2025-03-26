@@ -7,6 +7,7 @@
 script = ExtResource("1_dk5gl")
 
 [node name="RotationOffset" type="Node2D" parent="."]
+position = Vector2(576, 345)
 
 [node name="Sprite2D" type="Sprite2D" parent="RotationOffset"]
 texture_filter = 1
