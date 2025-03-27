@@ -11,16 +11,19 @@ position = Vector2(576, 345)
 
 [node name="Sprite2D" type="Sprite2D" parent="RotationOffset"]
 texture_filter = 1
+scale = Vector2(3.425, 3.425)
 texture = ExtResource("1_vk1bi")
+flip_h = true
 
 [node name="Shadow" type="Sprite2D" parent="RotationOffset/Sprite2D"]
 modulate = Color(0, 0, 0, 0.215686)
 z_index = -1
 texture_filter = 1
 texture = ExtResource("1_vk1bi")
+flip_h = true
 
 [node name="shoot_pos" type="Marker2D" parent="RotationOffset/Sprite2D"]
-position = Vector2(-15, -4)
+position = Vector2(13.035, -4)
 
 [node name="ShootTimer" type="Timer" parent="."]
 one_shot = true

@@ -27,7 +27,7 @@ func _shoot():
 	var new_bullet = bullet_scene.instantiate()
 	new_bullet.global_position = ShootPos.global_position
 	new_bullet.global_rotation = ShootPos.global_rotation
-	new_bullet.speed = 120.0
+	new_bullet.speed = 250
 	get_parent().add_child(new_bullet)
 
 func _on_shoot_timer_timeout() -> void:
