@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbby0jtq1jnpw"]
+
+[ext_resource type="Script" uid="uid://lmg4xnshpyf5" path="res://scripts/bullet.gd" id="1_y25gk"]
+[ext_resource type="Texture2D" uid="uid://bpemaxnmlifxg" path="res://assets/Flower Bullets-export.png" id="2_l5glv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eoqba"]
+
+[node name="bullet" type="Area2D"]
+script = ExtResource("1_y25gk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2.235, 2.235)
+shape = SubResource("CircleShape2D_eoqba")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.945, 1.945)
+texture = ExtResource("2_l5glv")
+region_enabled = true
+region_rect = Rect2(-0.930977, -1.1273, 32.5573, 32.7967)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

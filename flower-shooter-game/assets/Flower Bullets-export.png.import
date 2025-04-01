@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jxwlgrc1q86a"
-path="res://.godot/imported/pink gun.png-2436d666d7f6b36b1a67d0131e7227c8.ctex"
+uid="uid://bpemaxnmlifxg"
+path="res://.godot/imported/Flower Bullets-export.png-2e6f731b9de713300996ef055edbcdb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pink gun.png"
-dest_files=["res://.godot/imported/pink gun.png-2436d666d7f6b36b1a67d0131e7227c8.ctex"]
+source_file="res://assets/Flower Bullets-export.png"
+dest_files=["res://.godot/imported/Flower Bullets-export.png-2e6f731b9de713300996ef055edbcdb0.ctex"]
 
 [params]
 
