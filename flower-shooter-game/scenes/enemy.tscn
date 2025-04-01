@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://qiccrjsnkwl7"]
+
+[ext_resource type="Script" uid="uid://dtd5h5tic7gqn" path="res://scripts/enemy.gd" id="1_md0e3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
+size = Vector2(51, 82)
+
+[node name="enemy" type="CharacterBody2D" groups=["enemies"]]
+script = ExtResource("1_md0e3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(24.5, 0)
+shape = SubResource("RectangleShape2D_md0e3")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(1, -43, 3, 41, 58, -3)
