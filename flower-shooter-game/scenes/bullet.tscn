@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bpemaxnmlifxg" path="res://assets/Flower Bullets-export.png" id="2_l5glv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eoqba"]
+radius = 7.60626
 
 [node name="bullet" type="Area2D"]
 script = ExtResource("1_y25gk")

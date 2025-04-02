@@ -1,7 +1,7 @@
 extends Node2D
 
 var enemy_scene = preload("res://scenes/enemy.tscn")
-@onready var player = $player
+@onready var player = $"."
 
 func _on_timer_timeout() -> void:
 	var enemy = enemy_scene.instantiate()

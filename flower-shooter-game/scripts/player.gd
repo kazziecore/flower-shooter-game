@@ -4,7 +4,7 @@ var bullet_scene = preload("res://scenes/bullet.tscn")
 const speed = 200
 @onready var shooty_part = $shootypart
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	look_at(get_global_mouse_position())
 
 	velocity.x = Input.get_axis("left", "right") * speed
