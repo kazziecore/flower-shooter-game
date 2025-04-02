@@ -15,7 +15,7 @@ shape = SubResource("CircleShape2D_eoqba")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(1.945, 1.945)
+scale = Vector2(1.39, 1.39)
 texture = ExtResource("2_l5glv")
 region_enabled = true
 region_rect = Rect2(-0.930977, -1.1273, 32.5573, 32.7967)
