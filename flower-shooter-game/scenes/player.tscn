@@ -14,7 +14,7 @@ script = ExtResource("1_g2els")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(5, 0)
-scale = Vector2(1.485, 1.485)
+scale = Vector2(1.615, 1.615)
 texture = ExtResource("1_3vyb7")
 flip_h = true
 
