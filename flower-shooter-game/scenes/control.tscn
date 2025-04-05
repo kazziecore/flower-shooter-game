@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlljannplo6nv"]
+[gd_scene load_steps=3 format=3 uid="uid://dlljannplo6nv"]
 
 [ext_resource type="Script" uid="uid://dg850usjpu1ba" path="res://control.gd" id="1_0fbet"]
+[ext_resource type="FontFile" uid="uid://b3qr6voqtlwwg" path="res://assets/Minecraft.ttf" id="2_r67kn"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,3 +14,4 @@ script = ExtResource("1_0fbet")
 layout_mode = 0
 offset_right = 146.0
 offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("2_r67kn")

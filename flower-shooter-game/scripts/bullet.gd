@@ -19,6 +19,8 @@ func _on_body_entered(body: Node2D) -> void:
 		body.queue_free()
 		queue_free()
 		
+		GameManager.add_score(1)
+		
 		var explosion = explosion_scene.instantiate()
 		explosion.global_position = global_position
 		explosion.emitting = true
