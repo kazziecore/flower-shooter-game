@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlljannplo6nv"]
+
+[ext_resource type="Script" uid="uid://dg850usjpu1ba" path="res://control.gd" id="1_0fbet"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 158.0
+offset_bottom = 57.0
+script = ExtResource("1_0fbet")
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 146.0
+offset_bottom = 65.0

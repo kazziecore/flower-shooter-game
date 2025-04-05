@@ -14,6 +14,10 @@ config/name="flower shooter game"
 run/main_scene="uid://bxi8qaj4bttlu"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
+[autoload]
+
+GameManager="*res://scripts/GameManager.gd"
+
 [display]
 
 window/stretch/mode="canvas_items"
