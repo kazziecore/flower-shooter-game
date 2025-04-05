@@ -2,7 +2,7 @@ extends Area2D
 
 var direction : Vector2
 const speed = 10
-var explosion_scene = preload("res://explosion.tscn")
+var explosion_scene = preload("res://scenes/explosion.tscn")
 
 func _physics_process(_delta: float) -> void:
 	global_position += direction * speed
