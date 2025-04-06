@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bxi8qaj4bttlu"]
+[gd_scene load_steps=11 format=3 uid="uid://bxi8qaj4bttlu"]
 
 [ext_resource type="Script" uid="uid://qeldlcjpqe1u" path="res://scenes/game.gd" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cnrnfo2kfb304" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://b474tbaleourq" path="res://assets/ground.png" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dlljannplo6nv" path="res://scenes/control.tscn" id="4_lbhrr"]
+[ext_resource type="AudioStream" uid="uid://c8j2o2gs3unl5" path="res://sound/evening_sky-196011.mp3" id="5_iywne"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
 normal = Vector2(0, 1)
@@ -17,6 +18,8 @@ distance = -4.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lbhrr"]
 distance = -1291.0
+
+[sub_resource type="GDScript" id="GDScript_iywne"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_yqjtg")
@@ -40,7 +43,6 @@ position = Vector2(0, -648)
 shape = SubResource("WorldBoundaryShape2D_lbhrr")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.8
 autostart = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -55,5 +57,11 @@ scale = Vector2(9.03906, 9.04167)
 texture = ExtResource("3_lnu2h")
 
 [node name="Control" parent="." instance=ExtResource("4_lbhrr")]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_iywne")
+volume_db = -6.71
+autoplay = true
+script = SubResource("GDScript_iywne")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

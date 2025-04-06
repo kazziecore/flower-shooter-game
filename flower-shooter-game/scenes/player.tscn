@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnrnfo2kfb304"]
+[gd_scene load_steps=5 format=3 uid="uid://cnrnfo2kfb304"]
 
 [ext_resource type="Script" uid="uid://cxd2cihy7avu5" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://c4mcqqmsv5dpg" path="res://assets/FlowerSheet.png" id="2_g2els"]
+[ext_resource type="AudioStream" uid="uid://cwmc3ps88vphy" path="res://sound/squish-pop-256410.mp3" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
 size = Vector2(9.60475, 16.0625)
@@ -28,3 +29,7 @@ shape = SubResource("RectangleShape2D_qhqgy")
 
 [node name="shootypart" type="Node2D" parent="."]
 position = Vector2(26.2626, -5.38721)
+
+[node name="bulletsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qhqgy")
+pitch_scale = 1.2
