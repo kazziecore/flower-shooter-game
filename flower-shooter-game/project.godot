@@ -22,6 +22,10 @@ GameManager="*res://scripts/GameManager.gd"
 
 window/stretch/mode="canvas_items"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/Kaz/Documents/GP2024-1/flower-shooter-game/flower-shooter-game/Clips/Demo.avi"
+
 [global_group]
 
 enemies=""
