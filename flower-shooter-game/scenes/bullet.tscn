@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bbby0jtq1jnpw"]
 
 [ext_resource type="Script" uid="uid://lmg4xnshpyf5" path="res://scripts/bullet.gd" id="1_y25gk"]
-[ext_resource type="Texture2D" uid="uid://c4mcqqmsv5dpg" path="res://assets/FlowerSheet.png" id="2_l5glv"]
+[ext_resource type="Texture2D" uid="uid://lq4cwu4arx6a" path="res://assets/NectarBullet.png" id="2_l5glv"]
 [ext_resource type="Script" uid="uid://ccvuadsjn1dr0" path="res://scenes/randombullet.gd" id="3_eoqba"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eoqba"]
@@ -11,12 +11,12 @@ radius = 7.60626
 script = ExtResource("1_y25gk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(2.235, 2.235)
+scale = Vector2(1.395, 1.395)
 shape = SubResource("CircleShape2D_eoqba")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(1.39, 1.39)
+scale = Vector2(0.835, 0.835)
 texture = ExtResource("2_l5glv")
 region_enabled = true
 region_rect = Rect2(-0.930977, -1.1273, 32.5573, 32.7967)

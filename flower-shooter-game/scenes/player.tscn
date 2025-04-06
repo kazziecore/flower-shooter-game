@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cnrnfo2kfb304"]
 
-[ext_resource type="Texture2D" uid="uid://jxwlgrc1q86a" path="res://assets/pink gun.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cxd2cihy7avu5" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://c4mcqqmsv5dpg" path="res://assets/FlowerSheet.png" id="2_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
 size = Vector2(9.60475, 16.0625)
@@ -15,8 +15,10 @@ script = ExtResource("1_g2els")
 texture_filter = 1
 position = Vector2(5, 0)
 scale = Vector2(1.615, 1.615)
-texture = ExtResource("1_3vyb7")
+texture = ExtResource("2_g2els")
 flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 31.5412, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6.73401, -1.34681)
