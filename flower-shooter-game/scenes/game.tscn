@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bxi8qaj4bttlu"]
+[gd_scene load_steps=12 format=3 uid="uid://bxi8qaj4bttlu"]
 
 [ext_resource type="Script" uid="uid://qeldlcjpqe1u" path="res://scenes/game.gd" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cnrnfo2kfb304" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://b474tbaleourq" path="res://assets/ground.png" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dlljannplo6nv" path="res://scenes/control.tscn" id="4_lbhrr"]
 [ext_resource type="AudioStream" uid="uid://c8j2o2gs3unl5" path="res://sound/evening_sky-196011.mp3" id="5_iywne"]
+[ext_resource type="Script" uid="uid://e8emayxa62c1" path="res://scripts/GameManager.gd" id="6_p57ef"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
 normal = Vector2(0, 1)
@@ -52,8 +53,64 @@ autostart = true
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 z_index = -1
 texture_filter = 1
-position = Vector2(572, 323)
-scale = Vector2(9.03906, 9.04167)
+position = Vector2(208.75, 127.25)
+scale = Vector2(3.36328, 3.60417)
+texture = ExtResource("3_lnu2h")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+texture_filter = 1
+position = Vector2(638, 130)
+scale = Vector2(3.36328, 3.60417)
+texture = ExtResource("3_lnu2h")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+texture_filter = 1
+position = Vector2(1063, 131)
+scale = Vector2(3.36328, 3.60417)
+texture = ExtResource("3_lnu2h")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+texture_filter = 1
+position = Vector2(943, 389)
+scale = Vector2(3.36328, 3.60417)
+texture = ExtResource("3_lnu2h")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+texture_filter = 1
+position = Vector2(517, 381)
+scale = Vector2(3.36328, 3.60417)
+texture = ExtResource("3_lnu2h")
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+texture_filter = 1
+position = Vector2(97, 384)
+scale = Vector2(3.36328, 3.60417)
+texture = ExtResource("3_lnu2h")
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+texture_filter = 1
+position = Vector2(217, 635)
+scale = Vector2(3.36328, 3.60417)
+texture = ExtResource("3_lnu2h")
+
+[node name="Sprite2D8" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+texture_filter = 1
+position = Vector2(640, 638)
+scale = Vector2(3.36328, 3.60417)
+texture = ExtResource("3_lnu2h")
+
+[node name="Sprite2D9" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+texture_filter = 1
+position = Vector2(1062, 642)
+scale = Vector2(3.36328, 3.60417)
 texture = ExtResource("3_lnu2h")
 
 [node name="Control" parent="." instance=ExtResource("4_lbhrr")]
@@ -63,5 +120,9 @@ stream = ExtResource("5_iywne")
 volume_db = -6.71
 autoplay = true
 script = SubResource("GDScript_iywne")
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("6_p57ef")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

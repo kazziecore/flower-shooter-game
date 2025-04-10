@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var bullet_scene = preload("res://scenes/bullet.tscn")
+var gamemanager = preload("res://scripts/GameManager.gd")
 const speed = 200
 @onready var is_reloading = false
 @onready var shooty_part = $shootypart
@@ -27,4 +28,6 @@ func _physics_process(_delta: float) -> void:
 		
 		if collision.get_collider().is_in_group("enemies") and not is_reloading:
 			is_reloading = true
+			GameManager.reset_score()
+			print(GameManager.score)
 			get_tree().reload_current_scene()
