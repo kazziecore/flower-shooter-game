@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgw1txnpjkcgt"]
+
+[ext_resource type="Script" uid="uid://xmdu017e1i1y" path="res://menu.gd" id="1_yqeox"]
+[ext_resource type="FontFile" uid="uid://b3qr6voqtlwwg" path="res://assets/Minecraft.ttf" id="2_vjb58"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 184.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqeox")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.014
+anchor_bottom = 0.014
+offset_left = 462.0
+offset_top = 292.912
+offset_right = 636.0
+offset_bottom = 321.912
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_vjb58")
+theme_override_font_sizes/font_size = 36
+text = "Play"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
