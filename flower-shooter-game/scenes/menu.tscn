@@ -1,7 +1,99 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgw1txnpjkcgt"]
+[gd_scene load_steps=22 format=3 uid="uid://cgw1txnpjkcgt"]
 
 [ext_resource type="Script" uid="uid://xmdu017e1i1y" path="res://menu.gd" id="1_yqeox"]
 [ext_resource type="FontFile" uid="uid://b3qr6voqtlwwg" path="res://assets/Minecraft.ttf" id="2_vjb58"]
+[ext_resource type="Texture2D" uid="uid://bs236w0m85at4" path="res://assets/Button.png" id="3_con2f"]
+[ext_resource type="Texture2D" uid="uid://ctj4mut5al4qb" path="res://assets/FlowerDefence.png" id="4_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://djrgefouytwaw" path="res://assets/Ant Anim.png" id="5_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://bjee8sdp1tl5f" path="res://assets/Beetle Anim.png" id="6_v86rl"]
+[ext_resource type="Texture2D" uid="uid://bvoc7c08gwmh7" path="res://assets/Ladybug Anim.png" id="7_13sgg"]
+[ext_resource type="Texture2D" uid="uid://cippah1mtqx3f" path="res://assets/Caterpillar Anim.png" id="7_i6lef"]
+[ext_resource type="Texture2D" uid="uid://b474tbaleourq" path="res://assets/ground.png" id="9_i6lef"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_con2f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ytvr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhnvy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3eks"]
+atlas = ExtResource("5_4ytvr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v86rl"]
+atlas = ExtResource("5_4ytvr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6lef"]
+atlas = ExtResource("6_v86rl")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70i5f"]
+atlas = ExtResource("6_v86rl")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cdou"]
+atlas = ExtResource("7_i6lef")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i42df"]
+atlas = ExtResource("7_i6lef")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mj5lg"]
+atlas = ExtResource("7_13sgg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufwb2"]
+atlas = ExtResource("7_13sgg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_13sgg"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_g3eks")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_v86rl")
+}],
+"loop": true,
+"name": &"Ant",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_i6lef")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_70i5f")
+}],
+"loop": true,
+"name": &"Beetle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_6cdou")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_i42df")
+}],
+"loop": true,
+"name": &"Catterpillar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_mj5lg")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_ufwb2")
+}],
+"loop": true,
+"name": &"LadyBug",
+"speed": 5.0
+}]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -16,26 +108,183 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yqeox")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="play" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.014
-anchor_bottom = 0.014
-offset_left = 462.0
-offset_top = 292.912
-offset_right = 636.0
-offset_bottom = 321.912
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.0
+offset_top = -39.0
+offset_right = 20.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_vjb58")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 51
+theme_override_styles/hover = SubResource("StyleBoxEmpty_con2f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4ytvr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mhnvy")
 text = "Play"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[node name="Sprite2D" type="Sprite2D" parent="play"]
+z_index = -1
+texture_filter = 1
+position = Vector2(129, 37)
+scale = Vector2(3.40625, 2.875)
+texture = ExtResource("3_con2f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(598, 236)
+scale = Vector2(8.79126, 9.65625)
+texture = ExtResource("4_mhnvy")
+
+[node name="Ant" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(225, 293)
+rotation = 0.444837
+scale = Vector2(3.375, 3.25)
+sprite_frames = SubResource("SpriteFrames_13sgg")
+animation = &"Ant"
+autoplay = "Ant"
+frame_progress = 0.167225
+speed_scale = 0.635
+
+[node name="Ant2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1090, 620)
+rotation = -0.159301
+scale = Vector2(2.31774, 2.07138)
+sprite_frames = SubResource("SpriteFrames_13sgg")
+animation = &"Ant"
+autoplay = "Ant"
+frame_progress = 0.575563
+speed_scale = 0.635
+
+[node name="Beetle" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(956, 459)
+rotation = -0.193606
+scale = Vector2(3.375, 3.25)
+sprite_frames = SubResource("SpriteFrames_13sgg")
+animation = &"Beetle"
+autoplay = "Beetle"
+frame_progress = 0.131142
+speed_scale = 0.635
+
+[node name="Beetle2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(493, 123)
+rotation = 0.203367
+scale = Vector2(2.90045, 2.41219)
+sprite_frames = SubResource("SpriteFrames_13sgg")
+animation = &"Beetle"
+autoplay = "Beetle"
+frame_progress = 0.260406
+speed_scale = 0.635
+
+[node name="LadyBug" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(84, 584)
+rotation = -0.193606
+scale = Vector2(2.67313, 2.51882)
+sprite_frames = SubResource("SpriteFrames_13sgg")
+animation = &"LadyBug"
+autoplay = "LadyBug"
+frame_progress = 0.761918
+speed_scale = 0.635
+
+[node name="LadyBug2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 183)
+rotation = -0.624578
+scale = Vector2(3.32813, 3.01096)
+sprite_frames = SubResource("SpriteFrames_13sgg")
+animation = &"LadyBug"
+autoplay = "LadyBug"
+frame_progress = 0.951682
+speed_scale = 0.635
+
+[node name="Catterpillar" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(618, 545)
+rotation = 0.474647
+scale = Vector2(2.67313, 2.51882)
+sprite_frames = SubResource("SpriteFrames_13sgg")
+animation = &"Catterpillar"
+autoplay = "Catterpillar"
+frame_progress = 0.137437
+speed_scale = 0.635
+
+[node name="Catterpillar2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(14, 76.9999)
+rotation = -0.212634
+scale = Vector2(2.67313, 2.51882)
+sprite_frames = SubResource("SpriteFrames_13sgg")
+animation = &"Catterpillar"
+autoplay = "Catterpillar"
+frame_progress = 0.308115
+speed_scale = 0.635
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+position = Vector2(205, 130)
+scale = Vector2(3.29688, 3.68056)
+texture = ExtResource("9_i6lef")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+position = Vector2(579, 130)
+scale = Vector2(3.29688, 3.68056)
+texture = ExtResource("9_i6lef")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+position = Vector2(949, 130)
+scale = Vector2(3.29688, 3.68056)
+texture = ExtResource("9_i6lef")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+position = Vector2(949, 397)
+scale = Vector2(3.29688, 3.68056)
+texture = ExtResource("9_i6lef")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+position = Vector2(538, 397)
+scale = Vector2(3.29688, 3.68056)
+texture = ExtResource("9_i6lef")
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+position = Vector2(176, 397)
+scale = Vector2(3.29688, 3.68056)
+texture = ExtResource("9_i6lef")
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+position = Vector2(186, 662)
+scale = Vector2(3.29688, 3.68056)
+texture = ExtResource("9_i6lef")
+
+[node name="Sprite2D8" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+position = Vector2(597, 662)
+scale = Vector2(3.29688, 3.68056)
+texture = ExtResource("9_i6lef")
+
+[node name="Sprite2D9" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+position = Vector2(1002, 662)
+scale = Vector2(3.29688, 3.68056)
+texture = ExtResource("9_i6lef")
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
