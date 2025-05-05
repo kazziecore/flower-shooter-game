@@ -12,5 +12,5 @@ How to Play: WASD to move, LMB to shoot
 The player shoots the enemies and the score resets upon death
 
 GAME DESIGN DOCUMENT:
-I origionally set out to make a game where you shot flowers with a hot pink gun, but I felt that that didn't feel very cohesive so I changed my idea to be that the player is the flower and they are defending themselves from bugs trying to eat and attack them. 
+I originally set out to make a game where you shot flowers with a hot pink gun, but I felt that that didn't feel very cohesive so I changed my idea to be that the player is the flower and they are defending themselves from bugs trying to eat and attack them. 
 The background of the level is a parralax background of one image multiplied.
