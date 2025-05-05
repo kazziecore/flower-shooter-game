@@ -2,6 +2,8 @@ Flower Defence
 Kaz O Donnell, TU984/1 C24308593
 You are a beautiful rose that defends itself from the horrible evil bugs in the garden!
 Video Demo: https://youtu.be/Qj_ADTzbX1M
+ITCH.IO LINK: https://kazziecore.itch.io/flower-defence
+
 ASSETS:
 Art/Visuals: Drawn by me in Aseprite
 Audio:
